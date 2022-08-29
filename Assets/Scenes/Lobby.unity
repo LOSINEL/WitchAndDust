@@ -2627,7 +2627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7573d6c5849169242ad9a1c3de23734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  optionGrayWindow: {fileID: 0}
+  optionGrayWindow: {fileID: 110518852}
 --- !u!1 &1139714298
 GameObject:
   m_ObjectHideFlags: 0

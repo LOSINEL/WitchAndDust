@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    /* 20220829
+    /* 20220829 작성자 김두현
      * 플레이어 캐릭터의 업그레이드 상태를 관리해주는 스크립트
      */
 

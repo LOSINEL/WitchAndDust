@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
      * 플레이어의 레벨, 생명력 등이 들어있는 스크립트
      */
 
-    int nowHp, maxHp, level; // 플레이어 현재 생명력 , 최대 생명력, 레벨
+    int nowHp, maxHp, level;
     float moveSpeed;
+
+    public int NowHp { get { return nowHp; } }
+    public int MaxHp { get { return maxHp; } }
 
     private void Start()
     {
@@ -63,6 +66,5 @@ public class Player : MonoBehaviour
         level = 1;
         maxHp = nowHp = 100;
         moveSpeed = 150f;
-
     }
 }

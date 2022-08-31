@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     int nowHp, maxHp, level;
     float moveSpeed;
+    int nowExp, maxExp;
 
     public int NowHp { get { return nowHp; } }
     public int MaxHp { get { return maxHp; } }
@@ -61,10 +62,34 @@ public class Player : MonoBehaviour
         level++;
     }
 
+    void CheckLevelUp()
+    {
+        if (nowExp >= maxExp)
+        {
+            LevelUp();
+            nowExp = nowExp - maxExp;
+            maxExp = 0;
+        }
+    }
+
     public void InitPlayerInfo()
     {
         level = 1;
         maxHp = nowHp = 100;
         moveSpeed = 150f;
+    }
+
+    public void AddExp(int num)
+    {
+        nowExp += num;
+        CheckLevelUp();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag.Equals("ExperiencePoint"))
+        {
+            AddExp(collision.GetComponent<ExperiencePoint>().GetExpPoint());
+        }
     }
 }

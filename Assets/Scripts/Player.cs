@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
 
     public int NowHp { get { return nowHp; } }
     public int MaxHp { get { return maxHp; } }
+    public int NowExp { get { return nowExp; } }
 
     private void Start()
     {
@@ -52,8 +53,18 @@ public class Player : MonoBehaviour
     {
         if(nowHp<=0)
         {
-            // 플레이어 사망처리
+            PlayerDead();
         }
+    }
+    bool GetPlayerLive()
+    {
+        if (nowHp <= 0) return false;
+        else return true;
+    }
+
+    public void PlayerDead()
+    {
+        Time.timeScale = 0f;
     }
 
     void LevelUp()
@@ -77,19 +88,13 @@ public class Player : MonoBehaviour
         level = 1;
         maxHp = nowHp = 100;
         moveSpeed = 150f;
+        nowExp = 0;
+        maxExp = 10;
     }
 
     public void AddExp(int num)
     {
         nowExp += num;
         CheckLevelUp();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag.Equals("ExperiencePoint"))
-        {
-            AddExp(collision.GetComponent<ExperiencePoint>().GetExpPoint());
-        }
     }
 }

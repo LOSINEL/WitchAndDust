@@ -7,6 +7,7 @@ public class DustMonster1 : MonoBehaviour
     public float moveSpeed;
     public int damage;
     public int nowHp, maxHp;
+    public GameObject expPrefab;
     Vector2 moveAngle;
     GameObject player;
     private void Start()
@@ -17,6 +18,21 @@ public class DustMonster1 : MonoBehaviour
     {
         moveAngle = (player.transform.position - transform.position).normalized;
         transform.Translate(new Vector2(moveAngle.x * moveSpeed * Time.deltaTime, moveAngle.y * moveSpeed * Time.deltaTime));
+    }
+    public void GetDamaged(int num)
+    {
+        nowHp -= num;
+        CheckDead();
+    }
+    void CheckDead()
+    {
+        if (nowHp <= 0) MonsterDead();
+    }
+
+    void MonsterDead()
+    {
+        GameObject exp = Instantiate(expPrefab, transform.position, Quaternion.identity);
+        exp.GetComponent<ExperiencePoint>().SetExpPoint(1);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

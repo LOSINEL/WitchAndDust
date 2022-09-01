@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DustMonster
   - ExperiencePoint
+  - ExpArea
   layers:
   - Default
   - TransparentFX

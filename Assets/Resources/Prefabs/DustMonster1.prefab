@@ -101,6 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 100
   damage: 1
+  nowHp: 0
+  maxHp: 0
+  expPrefab: {fileID: 6876662949320246680, guid: 253c330cf5b0ac744b9b1e1273f214f6, type: 3}
 --- !u!61 &8392327589691440526
 BoxCollider2D:
   m_ObjectHideFlags: 0

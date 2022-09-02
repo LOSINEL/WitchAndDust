@@ -27,6 +27,7 @@ public class GetExpArea : MonoBehaviour
         if(collision.gameObject.tag.Equals("ExperiencePoint"))
         {
             player.GetComponent<Player>().AddExp(collision.GetComponent<ExperiencePoint>().GetExpPoint());
+            Debug.Log(player.GetComponent<Player>().NowExp);
             Destroy(collision.gameObject);
         }
     }

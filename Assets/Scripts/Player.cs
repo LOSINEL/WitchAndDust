@@ -11,10 +11,14 @@ public class Player : MonoBehaviour
     int nowHp, maxHp, level;
     float moveSpeed;
     int nowExp, maxExp;
+    public GameObject playerHpBar;
+    public GameObject abilityWindow;
+    int abilitySelectNum = 1;
 
     public int NowHp { get { return nowHp; } }
     public int MaxHp { get { return maxHp; } }
     public int NowExp { get { return nowExp; } }
+    public int AbilitySelectNum { get { return abilitySelectNum; } set { abilitySelectNum = value; } }
 
     private void Start()
     {
@@ -46,6 +50,7 @@ public class Player : MonoBehaviour
     public void AddHp(int _hp)
     {
         nowHp += _hp;
+        playerHpBar.GetComponent<PlayerHpBar>().RefreshPlayerHpBar();
         CheckDead();
     }
 
@@ -71,6 +76,7 @@ public class Player : MonoBehaviour
     {
         nowHp = maxHp;
         level++;
+        abilityWindow.SetActive(true);
     }
 
     void CheckLevelUp()

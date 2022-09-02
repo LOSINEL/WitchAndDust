@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DustMonster1 : MonoBehaviour
+public class Monster : MonoBehaviour
 {
     public float moveSpeed;
     public int damage;
@@ -22,6 +22,7 @@ public class DustMonster1 : MonoBehaviour
     public void GetDamaged(int num)
     {
         nowHp -= num;
+        GetComponent<MonsterHpBar>().RefreshHpBar();
         CheckDead();
     }
     void CheckDead()

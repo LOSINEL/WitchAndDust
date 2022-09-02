@@ -23,6 +23,6 @@ public class PlayerHpBar : MonoBehaviour
 
     public void RefreshPlayerHpBar()
     {
-        GetComponent<Image>().fillAmount = player.GetComponent<Player>().NowHp / player.GetComponent<Player>().MaxHp;
+        GetComponent<Image>().fillAmount = (float)player.GetComponent<Player>().NowHp / (float)player.GetComponent<Player>().MaxHp;
     }
 }

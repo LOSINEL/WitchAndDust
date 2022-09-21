@@ -15,7 +15,7 @@ public class AbilityWindowButton : MonoBehaviour
     public void SelectAbilityConfirm()
     {
         if (abilityNum == -1) return;
-        else Abilities.nowAbilityLevel[abilityNum]++;
+        else AbilityManager.nowAbilityLevel[abilityNum]++;
         abilityButtonWindow.SetActive(false);
     }
 

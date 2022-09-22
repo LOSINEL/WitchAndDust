@@ -10,5 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf6de70394d5fc4faf622b7ad47127b, type: 3}
-  m_Name: MagicMissile
+  m_Name: BubbleMissile
   m_EditorClassIdentifier: 
+  abilityImage: {fileID: 0}
+  abilityInfo: []
+  abilityName: "\uBC84\uBE14 \uBBF8\uC0AC\uC77C"
+  abilityPrefab: {fileID: 6884257316063489619, guid: e96572623a44ee541ae6b732122cbeee, type: 3}

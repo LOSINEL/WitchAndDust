@@ -8,4 +8,6 @@ public class Ability : ScriptableObject
     public Image abilityImage;
     public string[] abilityInfo;
     public string abilityName;
+    public GameObject abilityPrefab;
+    public int maxLevel;
 }

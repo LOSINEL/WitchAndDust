@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6884257316063489621}
   - component: {fileID: 6884257316063489618}
   - component: {fileID: 6884257316063489620}
+  - component: {fileID: 2628527001037533258}
   m_Layer: 0
   m_Name: BubbleMissile
   m_TagString: Untagged
@@ -101,3 +102,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &2628527001037533258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884257316063489619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bd74d8d9e36054a8c31fb829f485bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0
+  damage: 0
+  size: 0
